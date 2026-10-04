@@ -4,6 +4,7 @@ const stopButton = document.getElementById("stop-button");
 const clearButton = document.getElementById("clear-button");
 const storeButton = document.getElementById("store-button");
 const storeList = document.getElementById("store-list");
+const deleteList = document.getElementById("delete-list");
 let storeListArray = [];
 
 let second = 0;
@@ -58,4 +59,9 @@ storeButton.addEventListener("click", () => {
     displayTime.innerText = `${hour.toString().padStart(2, "0")}:${minute.toString().padStart(2, "0")}:${second.toString().padStart(2, "0")}`;
         storeButton.disabled = true;
     }
+    deleteList.addEventListener("click", () => {
+        listItem.remove();
+        storeListArray = []
+        storeButton.disabled = false;
+    })
 })
