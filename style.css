@@ -1,0 +1,196 @@
+/* Premium Typography & Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Background Design (Modern Dark Mode) */
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main Heading styling */
+#heading {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Centralizing Main Layout (Strictly Keeping Your Position Framework) */
+#stop-watch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 35px;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 50px 40px;
+    border-radius: 28px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* The Big Time Display Circle (Kept your padding approach + Cyberpunk Styling) */
+#display-time {
+    font-size: 38px;
+    font-weight: 700;
+    color: #38bdf8;
+    border: 4px solid #38bdf8;
+    border-radius: 50%;
+    padding: 60px 45px; /* Symmetrical padding taake exact perfect circle bane */
+    font-variant-numeric: tabular-nums;
+    display: inline-block;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2), inset 0 0 20px rgba(56, 189, 248, 0.1);
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+    background: rgba(15, 23, 42, 0.5);
+}
+
+/* Horizontal Buttons Row Position */
+#buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* The Circular Buttons (Kept your 50px circle framework + Advanced Styling) */
+button {
+    width: 55px;
+    height: 55px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #ffffff;
+}
+
+/* Unique & Contextual Glowing Colors for Individual Buttons */
+#start-button {
+    border-color: #10b981;
+    color: #10b981;
+}
+#start-button:hover:not(:disabled) {
+    background-color: #10b981;
+    color: #0f172a;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+
+#stop-button {
+    border-color: #ef4444;
+    color: #ef4444;
+}
+#stop-button:hover:not(:disabled) {
+    background-color: #ef4444;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
+#clear-button {
+    border-color: #f59e0b;
+    color: #f59e0b;
+}
+#clear-button:hover:not(:disabled) {
+    background-color: #f59e0b;
+    color: #0f172a;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
+
+#store-button {
+    border-color: #a855f7;
+    color: #a855f7;
+}
+#store-button:hover:not(:disabled) {
+    background-color: #a855f7;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+/* Dynamic Click & Disabled States */
+button:active:not(:disabled) {
+    transform: scale(0.92);
+}
+
+button:disabled {
+    border-color: #475569 !important;
+    color: #475569 !important;
+    background-color: transparent !important;
+    cursor: not-allowed;
+    box-shadow: none !important;
+}
+
+/* Store List Container */
+ul {
+    text-align: center;
+    list-style-type: none;
+    width: 100%;
+    max-width: 260px;
+    margin-top: 10px;
+}
+
+ul h3 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #94a3b8;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+/* Sleek Animated List Items */
+li {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #e2e8f0;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+/* Maximum 5 Items Limit Error Style */
+h4 {
+    margin-top: 15px;
+    color: #f87171;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: rgba(239, 68, 68, 0.15);
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Entry Animation for Laps */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
