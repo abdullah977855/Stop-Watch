@@ -49,7 +49,7 @@ storeButton.addEventListener("click", () => {
     storeList.appendChild(listItem);
     storeListArray.push(displayTime.innerText);
     if (storeListArray.length == 5) {
-        let warning = document.createElement("h4");
+        var warning = document.createElement("h4");
         warning.innerText = "Maximum Store 5 Items";
         storeList.appendChild(warning);
         clearInterval(timer);
@@ -63,5 +63,7 @@ storeButton.addEventListener("click", () => {
         listItem.remove();
         storeListArray = []
         storeButton.disabled = false;
+        warning.remove();
     })
+    startButton.disabled = false;
 })
